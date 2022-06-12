@@ -1,0 +1,50 @@
+﻿@model List<Portfolio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-9 mx-auto">
+            <a asp-controller="Portfolios" asp-action="Create" class="btn btn-primary">Create</a>
+        </div>
+        <div class="col-9 mx-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">HoverTitle</th>
+                        <th scope="col">ProjectDate</th>
+                        <th scope="col">HoverImage</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <h1>@Model[0].productImage.Count</h1>
+                    @foreach (var prt in Model)
+                    {
+
+                        <tr>
+                            <th scope="row">@prt.Category</th>
+                            <th scope="row">@prt.HoverTitle</th>
+                            <th scope="row">@prt.ProjectDate</th>
+
+                            <th scope="row"><img src="~/upload/portfolio/" width="80" height="80"></th>
+                            <td>
+                                <a asp-controller="Portfolios" asp-action="Edit" type="button" class="btn btn-warning" asp-route-Id="@prt.Id">Edit</a>
+                                <a asp-controller="Portfolios" asp-action="Delete" type="button" class="btn btn-danger sweet-delete" asp-route-Id="@prt.Id">Delete</a>
+                            </td>
+                        </tr>
+
+                    }
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+

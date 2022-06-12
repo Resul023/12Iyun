@@ -1,0 +1,45 @@
+﻿
+@model List<Services>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-9 mx-auto">
+            <a asp-controller="Services" asp-action="Create" class="btn btn-primary">Create</a>
+        </div>
+        <div class="col-9 mx-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">Icons</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var srv in Model)
+                    {
+                        <tr>
+                            <th scope="row">@srv.Title</th>
+                            <td>@srv.Desc</td>
+                            <td>@srv.Icon</td>
+                            <td>
+                                <a asp-controller="Services" asp-action="Edit" type="button" class="btn btn-warning" asp-route-Id="@srv.Id">Edit</a>
+                                <a asp-controller="Services" asp-action="Delete" type="button" class="btn btn-danger sweet-delete" asp-route-Id="@srv.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+

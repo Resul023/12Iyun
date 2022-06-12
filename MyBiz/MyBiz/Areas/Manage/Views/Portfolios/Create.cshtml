@@ -1,0 +1,81 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-9 mx-auto mt-3">
+
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Category" class="form-label"></label>
+                    <input asp-for="Category" type="text" class="form-control">
+                    <span asp-validation-for="Category"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Desc" class="form-label"></label>
+                    <input asp-for="Desc" type="text" class="form-control">
+                    <span asp-validation-for="Desc"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="HoverTitle" class="form-label"></label>
+                    <input asp-for="HoverTitle" type="text" class="form-control">
+                    <span asp-validation-for="HoverTitle"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Url" class="form-label"></label>
+                    <input asp-for="Url" type="text" class="form-control">
+                    <span asp-validation-for="Url"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="ProductTitle1" class="form-label"></label>
+                    <input asp-for="ProductTitle1" type="text" class="form-control">
+                    <span asp-validation-for="ProductTitle1"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="PorjectTitle2" class="form-label"></label>
+                    <input asp-for="PorjectTitle2" type="text" class="form-control">
+                    <span asp-validation-for="PorjectTitle2"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Client" class="form-label"></label>
+                    <input asp-for="Client" type="text" class="form-control">
+                    <span asp-validation-for="Client"></span>
+                </div>
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="ProjectDate" class="form-label"></label>
+                    <input asp-for="ProjectDate" class="form-control">
+                    <span asp-validation-for="ProjectDate"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <p>HoverImage</p>
+                    <input asp-for="HoverImage">
+                    <span asp-validation-for="HoverImage"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <p>DetailImages</p>
+                    <input asp-for="DetailImages">
+                    <span asp-validation-for="DetailImages"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>

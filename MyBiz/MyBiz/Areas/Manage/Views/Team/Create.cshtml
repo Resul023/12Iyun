@@ -1,0 +1,68 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-9 mx-auto mt-3">
+
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="WorkerName" class="form-label"></label>
+                    <input asp-for="WorkerName" type="text" class="form-control">
+                    <span asp-validation-for="WorkerName"></span>
+                </div>
+                <div class="input-group input-group-outline my-3">
+                    <select class="form-select" aria-label="Default select example"asp-for="PositionId" asp-items="new SelectList((List<Position>)ViewBag.Position,nameof(Position.Id),nameof(Position.Department))">
+                    </select>
+                    <span asp-validation-for="PositionId"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Desc" class="form-label"></label>
+                    <input asp-for="Desc" type="text" class="form-control">
+                    <span asp-validation-for="Desc"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="InstaUrl" class="form-label"></label>
+                    <input asp-for="InstaUrl" type="text" class="form-control">
+                    <span asp-validation-for="InstaUrl"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="TwitUrl" class="form-label"></label>
+                    <input asp-for="TwitUrl" type="text" class="form-control">
+                    <span asp-validation-for="TwitUrl"></span>
+                </div>
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="FaceUrl" class="form-label"></label>
+                    <input asp-for="FaceUrl" type="text" class="form-control">
+                    <span asp-validation-for="FaceUrl"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="linkUrl" class="form-label"></label>
+                    <input asp-for="linkUrl" type="text" class="form-control">
+                    <span asp-validation-for="linkUrl"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <input asp-for="ImageFile">
+                    <span asp-validation-for="ImageFile"></span>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>

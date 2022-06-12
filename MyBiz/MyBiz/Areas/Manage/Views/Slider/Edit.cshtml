@@ -1,0 +1,59 @@
+﻿@model Sliders
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-9 mx-auto mt-3">
+
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" type="text" class="form-control">
+                    <span asp-validation-for="Title"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Desc" class="form-label"></label>
+                    <input asp-for="Desc" type="text" class="form-control">
+                    <span asp-validation-for="Desc"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="BtnText" class="form-label"></label>
+                    <input asp-for="BtnText" type="text" class="form-control">
+                    <span asp-validation-for="BtnText"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="BtnUrl" class="form-label"></label>
+                    <input asp-for="BtnUrl" type="text" class="form-control">
+                    <span asp-validation-for="BtnUrl"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Order" class="form-label"></label>
+                    <input asp-for="Order" type="number" class="form-control">
+                    <span asp-validation-for="Order"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <input asp-for="ImageFile">
+                    <span asp-validation-for="ImageFile"></span>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+

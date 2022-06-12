@@ -1,0 +1,41 @@
+﻿@model Services
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-9 mx-auto mt-3">
+
+            <form asp-action="Edit" method="post">
+
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" type="text" class="form-control">
+                    <span asp-validation-for="Title"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Desc" class="form-label"></label>
+                    <input asp-for="Desc" type="text" class="form-control">
+                    <span asp-validation-for="Desc"></span>
+                </div>
+
+                <div class="input-group input-group-outline my-3">
+                    <label asp-for="Icon" class="form-label"></label>
+                    <input asp-for="Icon" type="text" class="form-control">
+                    <span asp-validation-for="Icon"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
